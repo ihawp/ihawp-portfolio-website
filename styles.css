@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&display=swap');
+
+body {
+  margin: 0px;
+  background-color: lightblue;
+    cursor: url('/carssite/suv4.png'), auto;
+}
+
+.league {
+  font-family: 'League Spartan', sans-serif;
+}
+
+.shrik {
+  font-family: 'Shrikhand', cursive;
+}
+
+#section {
+  position: absolute;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.moving-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #6c63ff, #9c6bff); /* Purple gradient */
+  pointer-events: none;
+  animation: moving 20s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: all 1s ease;
+}
+    header h1 {
+        color: white;
+        font-size: 11vh;
+        text-shadow: -9px 7px 1px rgb(0,0,0,0.43);
+    }
+    #header-text {
+        color: white;
+        font-size: 11vh;
+        text-shadow: -9px 7px 1px rgb(0,0,0,0.43);
+        transition: all 1s ease;
+    }
+header-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    animation-name: wow;
+    animation: forwards 0.5s wow;
+}
+    header-side {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        width: 25vw;
+    }
+        header-side a {
+            margin-left: 4vw;
+            color: white;
+            border-width: 3px;
+            border-color: white;
+            border-style: solid;
+            border-radius: 15px;
+
+            padding: 10px 20px;
+            font-size: 2vh;
+            transition: all 0.15s ease;
+            cursor: pointer;
+        }
+            header-side a:hover {
+                color: rgb(0,0,0,0.43);
+                border-color: rgb(0,0,0,0.43);
+            }
+        #back-to-home {
+            opacity: 0;
+        }
+    header-center {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+    }
+#header-options-button {
+    transition: all 0.5s ease;
+}
+#header-options-button2 {
+    transition: all 0.5s ease;
+}
+#header-options {
+    animation: forwards 0.5s wow;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+    #header-options a {
+        margin: 20px;
+        color: white;
+        cursor: pointer;
+        font-size: 3vh;
+        transition: all 0.2s ease;
+    }
+        #header-options a:hover {
+            color: rgb(0,0,0,0.43);
+            transform: scale(1.15);
+        }
+#content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-content {
+  width: 60vw;
+  height: 50vh;
+}
+    #main-content div {
+        background-color: white;
+        box-shadow: -15px 10px 1px rgb(0,0,0,0.43);
+        border-radius: 15px;
+        width: 60vw;
+        height: 50vh;
+        overflow: hidden;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+mc-button {
+    background-color: transparent;
+    border-radius: 15px;
+    width: 20vw;
+    height: 50vh;
+    animation-name: slideForwardAnimation;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    mc-button button {
+        font-size: 3vh;
+        border-radius: 150px;
+        padding: 17px 27.5px;
+        background-color: transparent;
+        border-color: white;
+        border-style: solid;
+        border-width: 3px;
+        cursor: pointer;
+        color: white;
+        font-family: 'Shrikhand', cursive;
+
+        transition: all 0.15s ease;
+    }
+        mc-button button:hover {
+            color: rgba(0, 0, 0, 0.43);
+            border-color: rgba(0, 0, 0, 0.43);
+            transform: scale(1.1);
+        }
+
+
+#back-slide-button {
+    opacity: 0;
+    transition: all 0.15s ease;
+}
+
+@keyframes moveLeft {
+    0% {
+      transform: translateX(0px);
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+      transform: translateX(-3000px);
+    }
+  }
+  
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(3000px);
+    }
+  }
+  
+  @keyframes wow {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

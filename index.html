@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ihawp</title>
+</head>
+<body>
+  <div id="section">
+    <div class="moving-background"></div>
+    <div id="content">
+      <header id="header" class="shrik">
+        <header-main>
+            <header-side>
+                <a id="back-to-home" onclick="returnHomeButton()">back to home</a>
+            </header-side>
+            <header-center>
+                <h1 id="header-text">ihawp</h1>
+            </header-center>
+            <header-side>
+
+            </header-side>
+        </header-main>
+        <div id="header-options">
+            <a id="header-options-button" onclick="displayPortfolio()">portfolio</a>
+            <a id="header-options-button2" onclick="displayContactMenu()">contact</a>
+        </div>
+      </header>
+      <main class="league">
+        <mc-button>
+            <button id="back-slide-button" onclick="backwardButton()"><</button>
+        </mc-button>
+        <div id="main-content" class="league">
+        </div>
+        <mc-button>
+            <button id="next-slide-button" onclick="forwardButton()">></button>
+        </mc-button>
+    </main>
+    </div>
+  </div>
+  <script src="ihawp.js"></script>
+</body>
+</html>
