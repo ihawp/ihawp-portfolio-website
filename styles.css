@@ -77,17 +77,17 @@ header-main {
         width: 25vw;
     }
         header-side a {
-            margin-left: 4vw;
-            color: white;
-            border-width: 3px;
-            border-color: white;
-            border-style: solid;
-            border-radius: 15px;
-
+            margin-left: 5vw;
             padding: 10px 20px;
-            font-size: 2vh;
-            transition: all 0.15s ease;
+            color: white;
             cursor: pointer;
+            font-size: 2vh;
+    
+            border-radius: 10px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: transparent;
+            transition: all 0.2s ease;
         }
             header-side a:hover {
                 color: rgb(0,0,0,0.43);
@@ -118,14 +118,23 @@ header-main {
 }
     #header-options a {
         margin: 20px;
+        padding: 10px 30px;
         color: white;
         cursor: pointer;
         font-size: 3vh;
+
+        border-radius: 10px;
+        border-width: 3px;
+        border-style: solid;
+        border-color: transparent;
         transition: all 0.2s ease;
     }
         #header-options a:hover {
             color: rgb(0,0,0,0.43);
-            transform: scale(1.15);
+            border-radius: 10px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgb(0, 0, 0, 0.43);
         }
 #content {
   position: relative;
@@ -149,18 +158,130 @@ main {
   height: 50vh;
 }
     #main-content div {
-        background-color: white;
-        box-shadow: -15px 10px 1px rgb(0,0,0,0.43);
+        background-color: rgb(0,0,0, 0.43);
         border-radius: 15px;
         width: 60vw;
         height: 50vh;
         overflow: hidden;
       
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
+
+        opacity: 1;
+        animation: forwards 1s flyin-right;
     }
+    @keyframes flyin-right {
+        0% {
+            opacity: 0;
+            transform: translateY(3000px);
+        }
+        89% {
+            box-shadow: 0px 0px 0px rgb(0,0,0,0.43);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+            box-shadow: -15px 10px 1px rgb(0,0,0,0.43);
+        }
+    }
+        #main-content div img {
+            width: 25vw;
+            height: 40vh;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        #main-content div form {
+            width: 25vw;
+            height: 40vh;
+            object-fit: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+            #main-content div form input {
+                width: 20vw;
+                padding: 10px 20px;
+                object-fit: cover;
+                font-size: 2.3vh;
+                border-radius: 4px;
+                margin: 5px;
+                font-family: 'League Spartan', sans-serif;
+            }
+            #main-content div form h1 {
+                object-fit: cover;
+                font-size: 4vh;
+                color: white;
+                margin: 10px;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                font-family: 'League Spartan', sans-serif;
+            }
+            #message-box {
+                padding: 10px 20px;
+                object-fit: cover;
+                font-size: 2.3vh;
+                border-radius: 4px;
+                margin: 5px;
+                font-family: 'League Spartan', sans-serif;
+                width: 20vw; /* Adjust the width as needed */
+                height: 20vh; /* Adjust the height as needed */
+                overflow-y: auto; /* Adds a vertical scrollbar if the content overflows */
+            }
+            #message {
+                white-space: pre-wrap; /* Preserves line breaks and wraps long lines */
+            }
+            #main-content div form button {
+                width: 20vw;
+                padding: 10px 20px;
+                object-fit: cover;
+                font-size: 2.5vh;
+                border-radius: 10px;
+                margin: 20px;
+                color: white;
+                background-color: transparent;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 3px;
+                cursor: pointer;
+                font-family: 'League Spartan', sans-serif;
+                transition: all 0.15s ease;
+            }
+                #main-content div form button:hover {
+                    color: rgb(0, 0, 0, 0.43);
+                    border-color: rgb(0, 0, 0, 0.43);
+                }
+        .above-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .above-img a {
+            font-size: 4vh;
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+            transition: all 0.15s ease;
+          }
+            .above-img a:hover {
+                color: black;
+            }
+          .above-img p {
+            color: white;
+            margin-top: 10px;
+          }
+        ai-text-block {
+            width: 30vw;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            ai-text-block h1 {
+                color: white;
+            }
 
 mc-button {
     background-color: transparent;
@@ -183,7 +304,6 @@ mc-button {
         cursor: pointer;
         color: white;
         font-family: 'Shrikhand', cursive;
-
         transition: all 0.15s ease;
     }
         mc-button button:hover {
