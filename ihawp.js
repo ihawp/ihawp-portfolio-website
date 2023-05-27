@@ -1,32 +1,30 @@
-// Define your portfolio dictionary
+// ihawp
+// we chillin
+
 const portfolioDictionary = {
     p0: {
       projectName: 'tech stack.',
       projectLink: '',
-      projectDesc: 'html, css, php, js, python',
-      projectLang: 'html, css, javascript',
-      projectImageURL: 'header-background.png'
+      projectDesc: '- html, css, php, js, python',
+      projectLang: '- html, css, javascript',
+      projectImageURL: 'header-background.png',
+      projectColor: "purple"
     },
     p1: {
       projectName: 'futurecar.',
       projectLink: '/carssite/index.html',
-      projectDesc: 'car website for buying, selling and auctioning cars.',
-      projectLang: 'html, css, javascript',
-      projectImageURL: 'future-car-portfolio-image.png'
+      projectDesc: '- car website for buying, selling and auctioning cars.',
+      projectLang: '- html, css, javascript',
+      projectImageURL: 'future-car-portfolio-image.png',
+      projectColor: "#dd1f1f"
     },
     p2: {
       projectName: 'currentweed.',
       projectLink: 'https://www.currentweed.site',
-      projectDesc: 'a website for thoughtful marijuana use.',
-      projectLang: 'html, css, javascript, php',
-      projectImageURL: 'currentweed-portfolio-image.png'
-    },
-    p3: {
-      projectName: 'currentweed.',
-      projectLink: 'https://www.currentweed.site',
-      projectDesc: 'a website for thoughtful marijuana use.',
-      projectLang: 'html, css, javascript, php',
-      projectImageURL: 'currentweed-portfolio-image.png'
+      projectDesc: '- a website for thoughtful marijuana use.',
+      projectLang: '- html, css, javascript, php',
+      projectImageURL: 'currentweed-portfolio-image.png',
+      projectColor: "#51f29c"
     }
   };
   
@@ -58,14 +56,17 @@ const portfolioDictionary = {
     const newSlide = document.createElement("div");
     newSlide.innerHTML = `
     <div class="above-img">
-    <img draggable="false" src='${slideData.projectImageURL}'></img>
+    <ai-image-block>
+        <img id="above-image-img" draggable="false" src='${slideData.projectImageURL}'></img>
+    </ai-image-block>
     <ai-text-block>
-        <a target="_blank" href="${slideData.projectLink}">${slideData.projectName}</a>
+        <a target="_blank" id="above-image-a" href="${slideData.projectLink}">${slideData.projectName}</a>
         <p>${slideData.projectDesc}</p>
         <p>${slideData.projectLang}</p>
-    <ai-text-block>
+    </ai-text-block>
     </div>
 `;
+    newSlide.style.backgroundColor = slideData.projectColor;
   
     // Clear the current content of the mainContent div
     mainContent.innerHTML = "";
@@ -132,21 +133,22 @@ function loadContactMenu() {
     const newSlide = document.createElement("div");
     newSlide.innerHTML = `
     <div class="above-img">
-    <form>
+    <form id="maincontentdivform">
         <h1>get a quote</h1>
         <input id="name-box" placeholder="name" type="entry" required>
         <input id="email-box" placeholder="email" type="email" required>
         <input id="message-box" placeholder="message" type="entry" required>
         <button type="submit" required>submit</button>
     </form>
-    <ai-text-block>
-        <a href="https://www.instagram.com/ihawp1">instagram</a>
-        <a href="https://github.com/ihawp">github</a>
-        <a href="mailto:ihawp@ihawp.com">email</a>
-    <ai-text-block>
+    <block id="contactform-text-block">
+        <a target="_blank" href="https://www.instagram.com/ihawp1"><img id="cftb-img" draggable="false" src="instagram.png"></img></a>
+        <a target="_blank" href="https://youtube.com/ihawp"><img id="cftb-img" draggable="false" src="youtube.png"></img></a>
+        <a target="_blank" href="https://github.com/ihawp"><img id="cftb-img" draggable="false" src="github.png"></img></a>
+        <a href="mailto:ihawp@ihawp.com"><img id="cftb-img" draggable="false" src="email.png"></img></a>
+    </block>
     </div> 
 `;
-  
+    newSlide.style.backgroundColor = 'rgb(0,0,0,0.63)';
     // Clear the current content of the mainContent div
     mainContent.innerHTML = "";
   

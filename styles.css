@@ -158,7 +158,6 @@ main {
   height: 50vh;
 }
     #main-content div {
-        background-color: rgb(0,0,0, 0.43);
         border-radius: 15px;
         width: 60vw;
         height: 50vh;
@@ -186,14 +185,14 @@ main {
             box-shadow: -15px 10px 1px rgb(0,0,0,0.43);
         }
     }
-        #main-content div img {
+        #above-image-img {
             width: 25vw;
             height: 40vh;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 5px;
         }
-        #main-content div form {
-            width: 25vw;
+        #maincontentdivform {
+            width: 30vw;
             height: 40vh;
             object-fit: cover;
             display: flex;
@@ -201,7 +200,7 @@ main {
             align-items: center;
             justify-content: center;
         }
-            #main-content div form input {
+            #maincontentdivform input {
                 width: 20vw;
                 padding: 10px 20px;
                 object-fit: cover;
@@ -210,7 +209,7 @@ main {
                 margin: 5px;
                 font-family: 'League Spartan', sans-serif;
             }
-            #main-content div form h1 {
+            #maincontentdivform h1 {
                 object-fit: cover;
                 font-size: 4vh;
                 color: white;
@@ -233,7 +232,7 @@ main {
             #message {
                 white-space: pre-wrap; /* Preserves line breaks and wraps long lines */
             }
-            #main-content div form button {
+            #maincontentdivform button {
                 width: 20vw;
                 padding: 10px 20px;
                 object-fit: cover;
@@ -249,7 +248,7 @@ main {
                 font-family: 'League Spartan', sans-serif;
                 transition: all 0.15s ease;
             }
-                #main-content div form button:hover {
+                #maincontentdivform button:hover {
                     color: rgb(0, 0, 0, 0.43);
                     border-color: rgb(0, 0, 0, 0.43);
                 }
@@ -258,19 +257,28 @@ main {
             justify-content: center;
             align-items: center;
           }
-          .above-img a {
-            font-size: 4vh;
+          #above-image-a {
+            font-size: 7vh;
             text-decoration: none;
-            color: white;
+            color: rgb(0, 0, 0, 0.43);
             margin: 10px;
-            transition: all 0.15s ease;
+            border-radius: 4px;
+            border-width: 3px;
+            border-style: solid;
+            border-color: rgba(0,0,0, 0.43);
+            padding: 10px 20px;
+            transition: all 0.2s ease;
           }
-            .above-img a:hover {
-                color: black;
+          #above-image-a:hover {
+                background-color: transparent;
+                color: rgb(0, 0, 0, 0.6);
+                border-color: rgba(0,0,0, 0.6);
             }
           .above-img p {
-            color: white;
-            margin-top: 10px;
+            font-size: 2.5vh;
+            color: rgba(0,0,0, 0.43);
+            font-weight: 700;
+            margin: 10px;
           }
         ai-text-block {
             width: 30vw;
@@ -280,8 +288,16 @@ main {
             align-items: center;
         }
             ai-text-block h1 {
-                color: white;
+                color: rgb(0, 0, 0, 0.43);
             }
+        ai-text-block a {
+            width: max-content;
+            text-align: left;
+            align-self: center;
+        }
+        ai-text-block p {
+            width: 20vw;
+        }
 
 mc-button {
     background-color: transparent;
@@ -311,7 +327,28 @@ mc-button {
             border-color: rgba(0, 0, 0, 0.43);
             transform: scale(1.1);
         }
-
+#contactform-text-block {
+    width: 30vw;
+    height: max-content;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#cftb-img {
+    flex-basis: 8vw;
+    width: 8vw;
+    height: 8vw;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    object-fit: cover;
+}
+#cftb-img:hover {
+    transform: scale(1.1);
+}
 
 #back-slide-button {
     opacity: 0;
